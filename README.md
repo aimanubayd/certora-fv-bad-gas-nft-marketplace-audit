@@ -1,3 +1,14 @@
+# Game Plan
+1. Warm up by verifying some stats of our NFTMock
+  1. Sanity Checks
+  2. Total Supply is never negative
+  3. Minting mints 1 NFT
+  4. Parametric Example
+
+2. Formally Verify a lot of stuff for GasBadNFTMarketplace
+  1. Anytime a mapping is updated, we emit an event
+  2. Calling ANY function on GasBadNFTMarketplace or NFTMarketplace, leaves the protocol in the same state
+
 # Gas Bad NFT Marketplace 
 
 <p align="center">
@@ -20,6 +31,7 @@ We will be deploying `GasBadNftMarketplace.sol` to the Ethereum mainnet, but are
 
 # Gas Bad NFT Marketplace
 
+- [Game Plan](#game-plan)
 - [Gas Bad NFT Marketplace](#gas-bad-nft-marketplace)
 - [Gas Bad NFT Marketplace](#gas-bad-nft-marketplace-1)
 - [About](#about)

@@ -20,7 +20,7 @@ methods {
     function getListing(address,uint256) external returns (INftMarketplace.Listing) envfree;
     function getProceeds(address) external returns (uint256) envfree;
 
-    // View Summary Example
+    // View Summary Example: Function summaries tell Certora how to model certain calls without analyzing their actual implementations in the usual way.
     function _.onERC721Received(address, address, uint256, bytes) external => ALWAYS(1); 
     // Dispatcher Summary Example, means the safeTransferFrom function will only be called by an NftMock
     function _.safeTransferFrom(address,address,uint256) external => DISPATCHER(true);
@@ -28,6 +28,7 @@ methods {
 
 // Wait... why doesn't this work?
 // ghost mathint listingUpdatesCount;
+// Ghost variables are verification-only variables used to track information during symbolic execution. They are not ordinary Solidity storage variables.
 ghost mathint listingUpdatesCount {
     // Axioms are CVL expressions that the tool will then assume are true about the ghost
     // init_state refers to the initial state of the ghost
